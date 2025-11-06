@@ -15,21 +15,14 @@ module alu#(
         always_comb
         begin
             case(Operation)
-            4'b0000:        // AND
-                    ALUResult = SrcA & SrcB;
-            4'b0010:        // ADD
-                    ALUResult = SrcA + SrcB;
-            4'b1000:        // Equal
-                    ALUResult = (SrcA == SrcB) ? 1 : 0;
-            4'b0110:        // Sub
-                    ALUResult = (SrcA - SrcB);
-            4'b0001:        // OR
-                    ALUResult = (SrcA | SrcB);
-            4'b0011:        // XOR
-                    ALUResult = (SrcA ^ SrcB);   
-
-            default:
-                    ALUResult = 0;
+            4'b0000: ALUResult = SrcA & SrcB;                                   // AND
+            4'b0001: ALUResult = SrcA | SrcB;                                   // OR
+            4'b0010: ALUResult = SrcA + SrcB;                                   // ADD
+            4'b0011: ALUResult = SrcA ^ SrcB;                                   // XOR
+            4'b0110: ALUResult = SrcA - SrcB;                                   // SUB
+            4'b1000: ALUResult = (SrcA == SrcB) ? 1 : 0;                        // EQUAL
+            4'b1100: ALUResult = ($signed(SrcA) < $signed(SrcB)) ? 1 : 0;       // SLT
+            default: ALUResult = 0;
             endcase
         end
 endmodule
