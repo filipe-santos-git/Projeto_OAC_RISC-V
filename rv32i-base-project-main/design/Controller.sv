@@ -19,13 +19,13 @@ module Controller (
     output logic Branch  //0: branch is not taken; 1: branch is taken
 );
 
-  logic [6:0] R_TYPE, LW, SW, BR;
+  logic [6:0] I_TYPE, R_TYPE, LW, SW, BR;
 
-  assign R_TYPE = 7'b0110011;  //add,and,slt
-  assign LW = 7'b0000011;  //lw
-  assign SW = 7'b0100011;  //sw
-  assign BR = 7'b1100011;  //beq
-  //assign //implementar I_TYPE
+  assign I_TYPE = 7'b0010011;   //addi,slti,slli,srli,srai
+  assign R_TYPE = 7'b0110011;   //add,and,slt
+  assign LW = 7'b0000011;       //lw
+  assign SW = 7'b0100011;       //sw
+  assign BR = 7'b1100011;       //beq
 
   assign ALUSrc = (Opcode == LW || Opcode == SW);
   assign MemtoReg = (Opcode == LW);
