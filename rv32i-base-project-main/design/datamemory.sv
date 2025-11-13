@@ -51,7 +51,7 @@ module datamemory #(
         3'b000: begin //SB
           Wr <= 4'b0001;
           //case com a
-          case (a[0:1])
+          case (a[1:0])
             2'b00: Datain <= {24'b0, wd[7:0]};
             2'b01: Datain <= {16'b0, wd[7:0], 8'b0};
             2'b10: Datain <= {8'b0, wd[7:0], 16'b0};
