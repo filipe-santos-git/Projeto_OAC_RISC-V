@@ -10,7 +10,7 @@ module imm_Gen (
     case (inst_code[6:0])
       7'b0010011:  /*I_Type instructions*/
         if (inst_code[14:12] == 3'b001 || inst_code[14:12] == 3'b101)begin
-          Imm_out = {27'b0, inst_code[24:20]};      // resolve os imediatos dos shit's
+          Imm_out = {27'b0, inst_code[24:20]};      //trata os imediatos dos shifts
         end
         else begin
           Imm_out = {inst_code[31] ? 20'hFFFFF : 20'b0, inst_code[31:20]};
