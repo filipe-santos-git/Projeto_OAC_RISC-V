@@ -8,9 +8,13 @@ module imm_Gen (
 
   always_comb
     case (inst_code[6:0])
-      7'b0000011:  /*I-type load part*/
-      //NEGATIVOS
-      Imm_out = {inst_code[31] ? 20'hFFFFF : 20'b0, inst_code[31:20]};
+      7'b0010011:  /*I_Type instructions*/
+        if (inst_code[14:12] == 3'b001 || inst_code[14:12] == 3'b101)begin
+          Imm_out = {27'b0, inst_code[24:20]};      // resolve os imediatos dos shit's
+        end
+        else begin
+          Imm_out = {inst_code[31] ? 20'hFFFFF : 20'b0, inst_code[31:20]};
+         end
 
       7'b0100011:  /*S-type*/
       Imm_out = {inst_code[31] ? 20'hFFFFF : 20'b0, inst_code[31:25], inst_code[11:7]};

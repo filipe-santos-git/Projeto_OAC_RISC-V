@@ -16,19 +16,16 @@ module ALUController (
                         ((ALUOp == 2'b10) && (Funct3 == 3'b101) && (Funct7 == 7'b0100000));     // SRAI
 
   assign Operation[1] = (ALUOp == 2'b00) ||                                                     // LW/SW
-                        ((ALUOp == 2'b10) && (Funct3 == 3'b000)) ||                             // ADD
+                        ((ALUOp == 2'b10) && (Funct3 == 3'b000)) ||                             // ADD/ADDI
                         ((ALUOp == 2'b10) && (Funct3 == 3'b100) && (Funct7 == 7'b0000000)) ||   // XOR
-                        ((ALUOp == 2'b10) && (Funct3 == 3'b101) && (Funct7 == 7'b0100000));     // SRA
+                        ((ALUOp == 2'b10) && (Funct3 == 3'b101) && (Funct7 == 7'b0100000));     // SRAI
 
   assign Operation[2] = ((ALUOp == 2'b10) && (Funct3 == 3'b101) && (Funct7 == 7'b0000000)) ||   // SRLI
                         ((ALUOp == 2'b10) && (Funct3 == 3'b101) && (Funct7 == 7'b0100000)) ||   // SRAI
                         ((ALUOp == 2'b10) && (Funct3 == 3'b000) && (Funct7 == 7'b0100000)) ||   // SUB
                         ((ALUOp == 2'b10) && (Funct3 == 3'b001)) ||                             // SLLI
-                        ((ALUOp == 2'b10) && (Funct3 == 3'b010));                               // SLT
+                        ((ALUOp == 2'b10) && (Funct3 == 3'b010));                               // SLT/SLTI
 
   assign Operation[3] = (ALUOp == 2'b01) ||                                                     // BEQ
-                        ((ALUOp == 2'b10) && (Funct3 == 3'b010));                               // SLT
+                        ((ALUOp == 2'b10) && (Funct3 == 3'b010));                               // SLT/SLTI
 endmodule
-
-// a gente so vai brincar com os funcs e aluop pra difer3enciar instruções
-// basicamente é algo "arbitrário" - se n tiver oficialmente 
