@@ -50,7 +50,7 @@ module datamemory #(
       case (Funct3)
         3'b000: begin //SB
           Wr <= 4'b0001;
-          // case com a
+          //case com a
           case (a[1:0])
             2'b00: Datain <= {24'b0, wd[7:0]};
             2'b01: Datain <= {16'b0, wd[7:0], 8'b0};
@@ -60,7 +60,7 @@ module datamemory #(
           endcase
         end
         3'b001: begin  //SH
-        // case com a
+        //case com a
           case (a[1])
             1'b0: begin
               Wr <= 4'b0011;
