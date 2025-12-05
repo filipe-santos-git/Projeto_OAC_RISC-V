@@ -24,11 +24,11 @@ module alu#(
             4'b0110: ALUResult = SrcA - SrcB;                               // SUB
             4'b0111: ALUResult = ($signed(SrcA)) >>> SrcB;                  // SRAI
             4'b1000: ALUResult = (SrcA == SrcB) ? 1 : 0;                    // BEQ
-            4'b1001: ALUResult = (SrcA != SrcB) ? 1 : 0;                    //BNE
-            4'b1110: ALUResult = ($signed(SrcA) < $signed(SrcB)) ? 1 : 0;   //BLT
-            4'b1011: ALUResult = ($signed(SrcA) >= $signed(SrcB)) ? 1 : 0;  //BGE
-            4'b1101: ALUResult = 11;                                         //JAL && JALR
+            4'b1001: ALUResult = (SrcA != SrcB) ? 1 : 0;                    // BNE
+            4'b1011: ALUResult = ($signed(SrcA) >= $signed(SrcB)) ? 1 : 0;  // BGE
             4'b1100: ALUResult = ($signed(SrcA) < $signed(SrcB)) ? 1 : 0;   // SLT/SLTI
+            4'b1101: ALUResult = 11;                                        // JAL/JALR
+            4'b1110: ALUResult = ($signed(SrcA) < $signed(SrcB)) ? 1 : 0;   // BLT
             default: ALUResult = 0;
             endcase
         end
