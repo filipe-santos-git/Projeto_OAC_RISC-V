@@ -318,6 +318,6 @@ module Datapath #(
       WrmuxSrc
   );
 
-  assign WB_Data = (1 == 1) ? D.Pc_Four : WrmuxSrc;
+  assign WB_Data = (D.jal_signal) ? D.Pc_Four : WrmuxSrc;
 
 endmodule
