@@ -25,16 +25,20 @@ module riscv #(
   logic [6:0] Funct7;
   logic [2:0] Funct3;
   logic [3:0] Operation;
+  logic JalrSel;
   logic jal_signal;
+  logic lui_signal;
 
   Controller c (
       opcode,
       ALUSrc,
       MemtoReg,
-      jal_signal,
       RegWrite,
       MemRead,
       MemWrite,
+      JalrSel,
+      jal_signal,
+      lui_signal,
       ALUop,
       Branch
   );
@@ -70,7 +74,9 @@ module riscv #(
       addr,
       wr_data,
       rd_data,
-      jal_signal
+      JalrSel,
+      jal_signal,
+      lui_signal
   );
 
 endmodule
