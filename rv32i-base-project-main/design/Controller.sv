@@ -15,9 +15,9 @@ module Controller (
     output logic RegWrite, //The register on the Write register input is written with the value on the Write data input 
     output logic MemRead,  //Data memory contents designated by the address input are put on the Read data output
     output logic MemWrite, //Data memory contents designated by the address input are replaced by the value on the Write data input.
-    output logic JalrSel, //1: BrPC = RD_One + ($signed(Imm)); 0: BrPC = (Branch_Sel) ? PC_Imm : 32'b0
-    output logic jal_signal, //1: WB_Data = D.Pc_Four; 0: (D.lui_signal) ? D.ImmG : WrmuxSrc
-    output logic lui_signal, //1: D.ImmG; 0: WrmuxSrc
+    output logic JalrSel, //Na Branch Unit, define Branch PC como Read Data 1 mais Immediate
+    output logic jal_signal, //Ao final do Datapath, define Write Back Data como PC + 4
+    output logic lui_signal, //Ao final do Datapath, define Write Back Data como Upper Immediate
     output logic [1:0] ALUOp,  //00: LW/SW; 01:Branch; 10: Rtype
     output logic Branch  //0: branch is not taken; 1: branch is taken
 );
