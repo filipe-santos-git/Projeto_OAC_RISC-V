@@ -22,7 +22,10 @@ module imm_Gen (
       7'b1100111:  /*I_Type JALR*/
       Imm_out = {inst_code[31] ? 20'hFFFFF : 20'b0, inst_code[31:20]};
 
-      7'b0110111:  /*U_Type*/
+      7'b0110111:  /*U_Type LUI*/
+      Imm_out = {inst_code[31:12], 12'b0};
+
+      7'b0010111:  /*U_Type AUIPC*/
       Imm_out = {inst_code[31:12], 12'b0};
       
       7'b1101111:  /*J-type*/

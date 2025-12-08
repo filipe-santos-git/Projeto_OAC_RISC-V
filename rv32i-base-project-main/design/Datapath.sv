@@ -38,7 +38,8 @@ module Datapath #(
     output logic [DATA_W-1:0] rd_data,  // read data
     input logic JalrSel,
     input logic jal_signal,
-    input logic lui_signal
+    input logic lui_signal,
+    input logic auipc_signal
 );
 
   logic [PC_W-1:0] PC, PCPlus4, Next_PC;
@@ -159,6 +160,7 @@ module Datapath #(
       B.JalrSel <= 0;
       B.jal_signal <= 0;
       B.lui_signal <= 0;
+      B.auipc_signal <= 0;
     end else begin
       B.ALUSrc <= ALUsrc;
       B.MemtoReg <= MemtoReg;
@@ -180,6 +182,7 @@ module Datapath #(
       B.JalrSel <= JalrSel;
       B.jal_signal <= jal_signal;
       B.lui_signal <= lui_signal;
+      B.auipc_signal <= auipc_signal;
     end
   end
 
@@ -260,6 +263,7 @@ module Datapath #(
       C.func7 <= 0;
       C.jal_signal <= 0;
       C.lui_signal <= 0;
+      C.auipc_signal <= 0;
     end else begin
       C.RegWrite <= B.RegWrite;
       C.MemtoReg <= B.MemtoReg;
@@ -277,6 +281,7 @@ module Datapath #(
       C.Curr_Instr <= B.Curr_Instr;  // debug tmp
       C.jal_signal <= B.jal_signal;
       C.lui_signal <= B.lui_signal;
+      C.auipc_signal <= B.auipc_signal;
     end
   end
 
@@ -312,6 +317,7 @@ module Datapath #(
       D.ImmG <= 0;
       D.jal_signal <= 0;
       D.lui_signal <= 0;
+      D.auipc_signal <= 0;
     end else begin
       D.RegWrite <= C.RegWrite;
       D.MemtoReg <= C.MemtoReg;
@@ -325,6 +331,7 @@ module Datapath #(
       D.Curr_Instr <= C.Curr_Instr;  //Debug Tmp
       D.jal_signal <= C.jal_signal;
       D.lui_signal <= C.lui_signal;
+      D.auipc_signal <= C.auipc_signal;
     end
   end
 
@@ -336,6 +343,6 @@ module Datapath #(
       WrmuxSrc
   );
 
-  assign WB_Data = (D.jal_signal) ? D.Pc_Four : (D.lui_signal) ? D.ImmG : WrmuxSrc;
+  assign WB_Data = (D.jal_signal) ? D.Pc_Four : (D.lui_signal) ? D.ImmG : (D.auipc_signal) ? D.Pc_Imm : WrmuxSrc;
 
 endmodule
