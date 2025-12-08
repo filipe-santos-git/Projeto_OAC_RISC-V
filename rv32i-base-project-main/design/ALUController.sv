@@ -2,7 +2,7 @@
 
 module ALUController (
     //Inputs
-    input logic [1:0] ALUOp,  // 2-bit opcode field from the Controller--00:LW/SW/AUIPC; 01:Branch; 10:Rtype/Itype; 11:JAL/LUI
+    input logic [1:0] ALUOp,  // 2-bit opcode field from the Controller--00:LOAD/STORE; 01:Branch; 10:Rtype/Itype; 11:JAL/JALR
     input logic [6:0] Funct7,  // bits 25 to 31 of the instruction
     input logic [2:0] Funct3,  // bits 12 to 14 of the instruction
 
@@ -17,7 +17,7 @@ module ALUController (
                         ((ALUOp == 2'b10) && (Funct3 == 3'b101)) ||                             // SRLI/SRAI
                         ((ALUOp == 2'b10) && (Funct3 == 3'b100));                               // XOR
 
-  assign Operation[1] = (ALUOp == 2'b00) ||                                                     // LW/SW
+  assign Operation[1] = (ALUOp == 2'b00) ||                                                     // LOAD/STORE
                         (ALUOp == 2'b01) && (Funct3 == 3'b100) ||                               // BLT
                         (ALUOp == 2'b01) && (Funct3 == 3'b101) ||                               // BGE
                         ((ALUOp == 2'b10) && (Funct3 == 3'b000)) ||                             // SUB/ADD/ADDI
