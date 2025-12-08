@@ -18,25 +18,27 @@ module Controller (
     output logic JalrSel, //Na Branch Unit, define Branch PC como Read Data 1 mais Immediate
     output logic jal_signal, //Ao final do Datapath, define Write Back Data como PC + 4
     output logic lui_signal, //Ao final do Datapath, define Write Back Data como Upper Immediate
+    output logic auipc_signal, //Ao final do Datapath, define Write Back Data como PC + Upper Immediate
     output logic [1:0] ALUOp,  //00: LW/SW; 01:Branch; 10: Rtype
     output logic Branch  //0: branch is not taken; 1: branch is taken
 );
 
-  logic [6:0] I_TYPE, R_TYPE, U_TYPE, LW, SW, BR, JAL, JALR, HALT;
+  logic [6:0] I_TYPE, R_TYPE, LW, SW, BR, JAL, JALR, HALT, LUI, AUIPC;
 
   assign I_TYPE = 7'b0010011;   //addi,slti,slli,srli,srai
   assign R_TYPE = 7'b0110011;   //add,and,slt
-  assign U_TYPE = 7'b0110111;   //lui
   assign LW     = 7'b0000011;   //lw,lh,lb,lbu
   assign SW     = 7'b0100011;   //sw,sh,sb
   assign BR     = 7'b1100011;   //beq,bne,blt,bge
   assign JAL    = 7'b1101111;   //jal
   assign JALR   = 7'b1100111;   //jalr
   assign HALT   = 7'b1111111;   //halt
+  assign LUI    = 7'b0110111;   //lui
+  assign AUIPC  = 7'b0010111;   //auipc
 
   assign ALUSrc = (Opcode == LW || Opcode == SW || Opcode == I_TYPE || Opcode == JAL || Opcode == JALR);
   assign MemtoReg = (Opcode == LW);
-  assign RegWrite = (Opcode == R_TYPE || Opcode == LW || Opcode == I_TYPE || Opcode == JAL || Opcode == JALR || Opcode == U_TYPE);
+  assign RegWrite = (Opcode == R_TYPE || Opcode == LW || Opcode == I_TYPE || Opcode == JAL || Opcode == JALR || Opcode == LUI || Opcode == AUIPC);
   assign MemRead = (Opcode == LW);
   assign MemWrite = (Opcode == SW);
   assign ALUOp[0] = (Opcode == BR || Opcode == JAL || Opcode == JALR);
@@ -44,5 +46,6 @@ module Controller (
   assign Branch = (Opcode == BR || Opcode == JAL || Opcode == JALR);
   assign JalrSel = (Opcode == JALR);
   assign jal_signal = (Opcode == JAL || Opcode == JALR);
-  assign lui_signal = (Opcode == U_TYPE);
+  assign lui_signal = (Opcode == LUI);
+  assign auipc_signal = (Opcode == AUIPC);
 endmodule

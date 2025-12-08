@@ -27,6 +27,7 @@ package Pipe_Buf_Reg_PKG;
     logic        JalrSel;
     logic        jal_signal;
     logic        lui_signal;
+    logic        auipc_signal;
   } id_ex_reg;
 
   // Reg C
@@ -47,6 +48,7 @@ package Pipe_Buf_Reg_PKG;
     logic [31:0] Curr_Instr;
     logic        jal_signal;
     logic        lui_signal;
+    logic        auipc_signal;
   } ex_mem_reg;
 
   // Reg D
@@ -63,5 +65,6 @@ package Pipe_Buf_Reg_PKG;
     logic [31:0] Curr_Instr;
     logic        jal_signal;
     logic        lui_signal;
+    logic        auipc_signal;
   } mem_wb_reg;
 endpackage
