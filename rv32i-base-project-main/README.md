@@ -48,6 +48,7 @@ O status das instruções implementadas adicionalmente:
 | # | Instrução | Implementada | Testada | Funcionando |
 |---|-----------|:-----------:|:-------:|:-----------:|
 | 1 | `LUI`     |     ✅     |   ✅   |     ✅     |
+| 2 | `AUIPC`   |     ✅     |   ✅   |     ✅     |
 
 ### Observações
 
