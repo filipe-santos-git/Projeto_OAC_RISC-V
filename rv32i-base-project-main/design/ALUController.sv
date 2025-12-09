@@ -13,12 +13,10 @@ module ALUController (
   assign Operation[0] = ((ALUOp == 2'b11)) ||                                                   // JAL/JALR
                         ((ALUOp == 2'b10) && (Funct3 == 3'b110)) ||                             // OR
                         (ALUOp == 2'b01) && (Funct3 == 3'b001) ||                               // BNE
-                        (ALUOp == 2'b01) && (Funct3 == 3'b101) ||                               // BGE
                         ((ALUOp == 2'b10) && (Funct3 == 3'b101)) ||                             // SRLI/SRAI
                         ((ALUOp == 2'b10) && (Funct3 == 3'b100));                               // XOR
 
   assign Operation[1] = (ALUOp == 2'b00) ||                                                     // LOAD/STORE
-                        (ALUOp == 2'b01) && (Funct3 == 3'b100) ||                               // BLT
                         (ALUOp == 2'b01) && (Funct3 == 3'b101) ||                               // BGE
                         ((ALUOp == 2'b10) && (Funct3 == 3'b000)) ||                             // SUB/ADD/ADDI
                         ((ALUOp == 2'b10) && (Funct3 == 3'b100)) ||                             // XOR

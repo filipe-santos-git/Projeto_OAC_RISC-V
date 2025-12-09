@@ -26,8 +26,7 @@ package Pipe_Buf_Reg_PKG;
     logic [31:0] Curr_Instr;
     logic        JalrSel;
     logic        jal_signal;
-    logic        lui_signal;
-    logic        auipc_signal;
+    logic [1:0]  UIOp;
   } id_ex_reg;
 
   // Reg C
@@ -42,13 +41,10 @@ package Pipe_Buf_Reg_PKG;
     logic [31:0] Alu_Result;
     logic [31:0] RD_Two;
     logic [4:0]  rd;
-    logic [31:0] ImmG;
     logic [2:0]  func3;
     logic [6:0]  func7;
     logic [31:0] Curr_Instr;
     logic        jal_signal;
-    logic        lui_signal;
-    logic        auipc_signal;
   } ex_mem_reg;
 
   // Reg D
@@ -61,10 +57,7 @@ package Pipe_Buf_Reg_PKG;
     logic [31:0] Alu_Result;
     logic [31:0] MemReadData;
     logic [4:0]  rd;
-    logic [31:0] ImmG;
     logic [31:0] Curr_Instr;
     logic        jal_signal;
-    logic        lui_signal;
-    logic        auipc_signal;
   } mem_wb_reg;
 endpackage
