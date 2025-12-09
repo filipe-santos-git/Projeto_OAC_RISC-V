@@ -1,4 +1,11 @@
-D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Memoria32.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Memoria32.sv
+{C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/HazardDetection.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/HazardDetection.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module HazardDetection
+
+Top level modules:
+	HazardDetection
+
+} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Memoria32.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Memoria32.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Memoria32
 
@@ -40,6 +47,23 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	flopr
 
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/BranchUnit.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/BranchUnit.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module BranchUnit
+
+Top level modules:
+	BranchUnit
+
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Datapath.sv} {2 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Datapath.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+** Warning: C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Datapath.sv(3): (vlog-13233) Design unit "Datapath_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package Datapath_sv_unit
+-- Importing package Pipe_Buf_Reg_PKG
+-- Compiling module Datapath
+
+Top level modules:
+	Datapath
+
 } {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ramOnChipData.v} {1 {vlog -work work -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ramOnChipData.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module ramOnChipData
@@ -71,12 +95,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Memoria32Data
 
-} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/alu.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/alu.sv}
+} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ramOnChipData.v {1 {vlog -work work -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ramOnChipData.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module alu
+-- Compiling module ramOnChipData
 
 Top level modules:
-	alu
+	ramOnChipData
 
 } {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/verif/tb_top.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/verif/tb_top.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -85,33 +109,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	tb_top
 
-} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ramOnChipData.v {1 {vlog -work work -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ramOnChipData.v
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/alu.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/alu.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ramOnChipData
+-- Compiling module alu
 
 Top level modules:
-	ramOnChipData
-
-} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Memoria32Data.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Memoria32Data.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Memoria32Data
-
-Top level modules:
-	Memoria32Data
-
-} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ForwardingUnit.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ForwardingUnit.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ForwardingUnit
-
-Top level modules:
-	ForwardingUnit
-
-} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/instructionmemory.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/instructionmemory.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module instructionmemory
-
-Top level modules:
-	instructionmemory
+	alu
 
 } {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ramOnChip32.v} {1 {vlog -work work -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ramOnChip32.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -120,12 +123,33 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	ramOnChip32
 
-} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/alu.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/alu.sv
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/instructionmemory.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/instructionmemory.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module alu
+-- Compiling module instructionmemory
 
 Top level modules:
-	alu
+	instructionmemory
+
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ForwardingUnit.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ForwardingUnit.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ForwardingUnit
+
+Top level modules:
+	ForwardingUnit
+
+} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Memoria32Data.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Memoria32Data.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Memoria32Data
+
+Top level modules:
+	Memoria32Data
+
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/imm_Gen.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/imm_Gen.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module imm_Gen
+
+Top level modules:
+	imm_Gen
 
 } {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux2.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux2.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -134,19 +158,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	mux2
 
-} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/instructionmemory.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/instructionmemory.sv
+} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/alu.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/alu.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module instructionmemory
+-- Compiling module alu
 
 Top level modules:
-	instructionmemory
+	alu
 
-} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ForwardingUnit.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ForwardingUnit.sv
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Controller.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Controller.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ForwardingUnit
+-- Compiling module Controller
 
 Top level modules:
-	ForwardingUnit
+	Controller
 
 } {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ramOnChip32.v {1 {vlog -work work -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ramOnChip32.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -155,19 +179,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	ramOnChip32
 
-} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux2.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux2.sv
+} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ForwardingUnit.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ForwardingUnit.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module mux2
+-- Compiling module ForwardingUnit
 
 Top level modules:
-	mux2
+	ForwardingUnit
 
-} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux4.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux4.sv}
+} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/instructionmemory.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/instructionmemory.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module mux4
+-- Compiling module instructionmemory
 
 Top level modules:
-	mux4
+	instructionmemory
+
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegPack.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegPack.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling package Pipe_Buf_Reg_PKG
+
+Top level modules:
+	--none--
 
 } {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegFile.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegFile.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -176,12 +207,33 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	RegFile
 
-} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegPack.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegPack.sv
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux4.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux4.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling package Pipe_Buf_Reg_PKG
+-- Compiling module mux4
 
 Top level modules:
-	--none--
+	mux4
+
+} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux2.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux2.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux2
+
+Top level modules:
+	mux2
+
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RISC_V.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RISC_V.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module riscv
+
+Top level modules:
+	riscv
+
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ALUController.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ALUController.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALUController
+
+Top level modules:
+	ALUController
 
 } {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Memoria32.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/Memoria32.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -190,26 +242,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Memoria32
 
-} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RISC_V.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RISC_V.sv
+} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegPack.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegPack.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module riscv
+-- Compiling package Pipe_Buf_Reg_PKG
 
 Top level modules:
-	riscv
+	--none--
 
-} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegFile.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegFile.sv
+} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/adder.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/adder.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module RegFile
+-- Compiling module adder
 
 Top level modules:
-	RegFile
-
-} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux4.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux4.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module mux4
-
-Top level modules:
-	mux4
+	adder
 
 } {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ALUController.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/ALUController.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -218,11 +263,25 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	ALUController
 
-} {} {}} {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/adder.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Antonio/Documents/Arquitetura de Computadores/AC/Projeto_OAC_RISC-V/rv32i-base-project-main/design/adder.sv}
+} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux4.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/mux4.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module adder
+-- Compiling module mux4
 
 Top level modules:
-	adder
+	mux4
+
+} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegFile.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RegFile.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RegFile
+
+Top level modules:
+	RegFile
+
+} {} {}} D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RISC_V.sv {1 {vlog -work work -sv -stats=none D:/Users/algm/Documents/Projeto_OAC_RISC-V/rv32i-base-project-main/design/RISC_V.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module riscv
+
+Top level modules:
+	riscv
 
 } {} {}}

@@ -27,8 +27,7 @@ module riscv #(
   logic [3:0] Operation;
   logic JalrSel;
   logic jal_signal;
-  logic lui_signal;
-  logic auipc_signal;
+  logic [1:0] UIOp;
 
   Controller c (
       opcode,
@@ -39,8 +38,7 @@ module riscv #(
       MemWrite,
       JalrSel,
       jal_signal,
-      lui_signal,
-      auipc_signal,
+      UIOp,
       ALUop,
       Branch
   );
@@ -78,8 +76,7 @@ module riscv #(
       rd_data,
       JalrSel,
       jal_signal,
-      lui_signal,
-      auipc_signal
+      UIOp
   );
 
 endmodule

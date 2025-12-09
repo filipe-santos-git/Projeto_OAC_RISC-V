@@ -17,8 +17,7 @@ module Controller (
     output logic MemWrite, //Data memory contents designated by the address input are replaced by the value on the Write data input.
     output logic JalrSel, //Na Branch Unit, define Branch PC como Read Data 1 mais Immediate
     output logic jal_signal, //Ao final do Datapath, define Write Back Data como PC + 4
-    output logic lui_signal, //Ao final do Datapath, define Write Back Data como Upper Immediate
-    output logic auipc_signal, //Ao final do Datapath, define Write Back Data como PC + Upper Immediate
+    output logic [1:0] UIOp, //Define a operação Upper Immediate que será armazenada no registrador Alu Result EX/MEM
     output logic [1:0] ALUOp,  //00: LW/SW; 01:Branch; 10: Rtype
     output logic Branch  //0: branch is not taken; 1: branch is taken
 );
@@ -46,6 +45,6 @@ module Controller (
   assign Branch = (Opcode == BR || Opcode == JAL || Opcode == JALR);
   assign JalrSel = (Opcode == JALR);
   assign jal_signal = (Opcode == JAL || Opcode == JALR);
-  assign lui_signal = (Opcode == LUI);
-  assign auipc_signal = (Opcode == AUIPC);
+  assign UIOp[0] = (Opcode == LUI);
+  assign UIOp[1] = (Opcode == AUIPC);
 endmodule
