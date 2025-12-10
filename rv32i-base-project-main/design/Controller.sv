@@ -25,7 +25,7 @@ module Controller (
   logic [6:0] I_TYPE, R_TYPE, LW, SW, BR, JAL, JALR, HALT, LUI, AUIPC;
 
   assign I_TYPE = 7'b0010011;   //addi,slti,slli,srli,srai
-  assign R_TYPE = 7'b0110011;   //add,and,slt
+  assign R_TYPE = 7'b0110011;   //add,and,slt,xor,or
   assign LW     = 7'b0000011;   //lw,lh,lb,lbu
   assign SW     = 7'b0100011;   //sw,sh,sb
   assign BR     = 7'b1100011;   //beq,bne,blt,bge
